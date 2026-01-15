@@ -21,7 +21,7 @@ public class Loops {
         /* Utilizado na produção de testes, ele só é executado uma vez para verificar uma condição,
         * geralmente antecede o uso do próprio while e é adequado por sua segurança e controle em sistemas
         * com grandes bases de dados e estruturas complexas */
-        int num = 0;
+        int num = 5;
         do {
             System.out.println("Número: " + num);
         }while (num < 2);
