@@ -1,4 +1,5 @@
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 // para utilizar Arrays é necessário importar sua biblioteca
 public class Arrays {
     public static void main(String[] args) {
