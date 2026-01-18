@@ -1,3 +1,5 @@
+package Estruturas;
+
 import java.util.ArrayList;
 
 // importando a biblioteca de arrays para utilização

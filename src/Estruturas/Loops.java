@@ -1,3 +1,5 @@
+package Estruturas;
+
 public class Loops {
     public static void main(String[] args){
         // Estrutura de Loop: While

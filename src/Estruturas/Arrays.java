@@ -1,10 +1,10 @@
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-// para utilizar Arrays é necessário importar sua biblioteca
+package Estruturas;
+
+// para utilizar Estruturas.Arrays é necessário importar sua biblioteca
 public class Arrays {
     public static void main(String[] args) {
 
-        /* Arrays são listas na programação, ou em outras palavras coleções de dados,
+        /* Estruturas.Arrays são listas na programação, ou em outras palavras coleções de dados,
          * que permitem a organização ordenada por índices de informações no código */
 
         // Estrutura básica de um array com valores int

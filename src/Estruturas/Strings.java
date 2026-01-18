@@ -1,3 +1,5 @@
+package Estruturas;
+
 public class Strings {
     public static void main (String[] args){
         // String é uma classe utilizada oara representar texto, são objetos
@@ -5,7 +7,7 @@ public class Strings {
         // Sua declaração pode ser feita de duas maneiras:
         String nome = "Camille";
         String sobreNome = new String ("Lima");
-        // Ação de concatenar Strings:
+        // Ação de concatenar Estruturas.Strings:
         String frasePronta = nome + " " + sobreNome +  ", seja bem vindo(a)!";
         System.out.println(frasePronta);
         // Podemos verificar a quanidade de caracteres que existem em uma String dessa forma:

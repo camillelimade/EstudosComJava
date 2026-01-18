@@ -1,9 +1,9 @@
-import java.util.ArrayList;
+package Estruturas;
 
 public class Matriz {
     public static void main(String[] args){
-        // Arrays multidirecionais (Matriz)
-        // Declarando uma Matriz (Array 2D)
+        // Estruturas.Arrays multidirecionais (Estruturas.Matriz)
+        // Declarando uma Estruturas.Matriz (Array 2D)
         int [][] matriz = new int[2][3];
 
         // Inicialização
