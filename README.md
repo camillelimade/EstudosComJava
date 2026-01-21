@@ -59,3 +59,13 @@ Para isso, existem algumas regras na definição de construtores personalizados:
 A sobrecarga permite que uma classe possua múltiplos métodos ou construtores com o mesmo nome, desde que apresentem listas de parâmetros diferentes.
 
 Na prática, isso significa que é possível criar objetos de uma mesma classe de diferentes maneiras, variando a forma como seus atributos são inicializados no momento da criação da instância.
+
+## Herança
+
+A herança é um conceito da Programação Orientada a Objetos que permite que uma classe filha (subclasse) herde atributos e métodos de uma classe mãe (superclasse).
+
+Há a conveniência de definir características e comportamentos comuns em uma classe base e, a partir dela, especializar as subclasses de acordo com suas necessidades específicas.
+
+Em Java, utiliza-se a palavra-chave `extends` para indicar que uma classe herda outra. O relacionamento da subclasse em direção à superclasse caracteriza a herança, enquanto o processo inverso, no qual a subclasse adiciona ou modifica comportamentos, é denominado especialização.
+
+- A palavra-chave `super` é utilizada para acessar atributos, métodos ou chamar o construtor da classe pai.
