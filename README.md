@@ -69,3 +69,13 @@ Há a conveniência de definir características e comportamentos comuns em uma c
 Em Java, utiliza-se a palavra-chave `extends` para indicar que uma classe herda outra. O relacionamento da subclasse em direção à superclasse caracteriza a herança, enquanto o processo inverso, no qual a subclasse adiciona ou modifica comportamentos, é denominado especialização.
 
 - A palavra-chave `super` é utilizada para acessar atributos, métodos ou chamar o construtor da classe pai.
+
+## Polimorfismo 
+Permite que o mesmo método seja usado em diferentes objetos com maneiras diferentes, tomando por exemplo:
+- Superclasse: Automóveis
+- Método: Acelerar
+  - Instancia Fusca: 328,195 km
+  - Instancia Palio: 171 km/h a 191 km/h
+
+Por mais que as instancias participem do mesmo agrupamento, isso não empede que elas possuam características comportamentais diferentes.
+Isso facilita a extensabilidade do código pois outros tipos de subclasse que derivam de Automóveis pode possuir um acelerar com um limite ou intervalos diferentes, contendo de forma controlada as variantes que podem vir a ser registradas nesse sistema, que poderia ser transcrito como um sistema de concersionária.
