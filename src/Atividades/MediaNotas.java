@@ -1,4 +1,4 @@
-package uni1_cap2;
+package Atividades;
 import java.util.Scanner;
 public class MediaNotas {
     public static void main(String[] args){
