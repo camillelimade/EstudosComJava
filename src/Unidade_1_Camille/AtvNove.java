@@ -11,7 +11,7 @@ public class AtvNove {
         String nomeInteiro = entrada.nextLine();
         String[] partes =  nomeInteiro.split(" ");
         String primeiroNome = partes[0];
-        String sobreNome = partes[1];
+        String sobreNome = partes[partes.length - 1];
         System.out.println("Esse é seu primeiro nome: " + primeiroNome);
         System.out.println("Esse é seu primeiro sobrenome " +  sobreNome);
         // Só não serve muito pra pessoas com nomes compostos 👀
