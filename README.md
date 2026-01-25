@@ -70,12 +70,31 @@ Em Java, utiliza-se a palavra-chave `extends` para indicar que uma classe herda 
 
 - A palavra-chave `super` é utilizada para acessar atributos, métodos ou chamar o construtor da classe pai.
 
-## Polimorfismo 
-Permite que o mesmo método seja usado em diferentes objetos com maneiras diferentes, tomando por exemplo:
+## Polimorfismo
+Permite que o mesmo método seja usado em diferentes objetos com comportamentos diferentes, em que o resultado depende de sua implementação, tomando por exemplo:
 - Superclasse: Automóveis
 - Método: Acelerar
-  - Instancia Fusca: 328,195 km
-  - Instancia Palio: 171 km/h a 191 km/h
+    - Instância Fusca: 328,195 km/h
+    - Instância Palio: 171 km/h a 191 km/h
 
-Por mais que as instancias participem do mesmo agrupamento, isso não empede que elas possuam características comportamentais diferentes.
-Isso facilita a extensabilidade do código pois outros tipos de subclasse que derivam de Automóveis pode possuir um acelerar com um limite ou intervalos diferentes, contendo de forma controlada as variantes que podem vir a ser registradas nesse sistema, que poderia ser transcrito como um sistema de concersionária.
+Por mais que as instâncias participem do mesmo agrupamento (a classe mãe *Automóveis*), isso não impede que elas possuam características comportamentais diferentes ao executar o mesmo método.  
+Isso facilita a extensibilidade do código, pois outros tipos de subclasses que derivam de *Automóveis* podem possuir um método `acelerar` com limites ou intervalos diferentes (ainda me referindo ao contexto dessa implementação, pois isso pode variar de acordo com os objetos e agrupamentos retratados), contendo de forma controlada as variantes que podem vir a ser registradas nesse sistema, que poderia ser transcrito como um sistema de concessionária.
+
+Como complemento e diversificação de fontes, usei como base este artigo do DevMedia:  
+[Uso de Polimorfismo em Java - DevMedia](https://www.devmedia.com.br/uso-de-polimorfismo-em-java/26140)
+
+### Tipos de Polimorfismo
+Existem dois tipos de polimorfismo:
+- Polimorfismo Estático (Sobrecarga)
+- Polimorfismo Dinâmico (Sobreposição)
+
+### Polimorfismo Estático (Sobrecarga)
+Ocorre quando uma classe possui múltiplos métodos com o mesmo nome, porém com assinaturas diferentes (quantidade e/ou tipo de parâmetros).  
+A escolha de qual método será executado acontece em tempo de compilação.  
+Esse tipo de polimorfismo **não utiliza a anotação `@Override`**, pois não envolve herança nem sobrescrita de métodos.
+
+### Polimorfismo Dinâmico (Sobreposição)
+Acontece quando uma subclasse sobrescreve um método herdado da superclasse, fornecendo uma implementação específica.  
+Nesse caso, a decisão de qual método será executado ocorre em tempo de execução.
+
+A anotação `@Override` é utilizada para indicar que o método da subclasse está sobrescrevendo corretamente um método da classe mãe, aumentando a clareza do código e ajudando a evitar erros.
