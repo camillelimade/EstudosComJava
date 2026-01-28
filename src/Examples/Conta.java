@@ -1,4 +1,4 @@
-package examples;
+package Examples;
 
 public class Conta {
     private double saldo;
