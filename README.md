@@ -107,3 +107,19 @@ Acontece quando uma subclasse sobrescreve um método herdado da superclasse, for
 Nesse caso, a decisão de qual método será executado ocorre em tempo de execução.
 
 A anotação `@Override` é utilizada para indicar que o método da subclasse está sobrescrevendo corretamente um método da classe mãe, aumentando a clareza do código e ajudando a evitar erros.
+
+
+## Abstração
+Link de apoio: https://comoprogramarjava.com.br/abstracao-em-java-classes-abstratas-e-interfaces/
+
+Diz respeito a criação de classes e interfaces que estabelecem uma estrutura básica para um tipo de objeto, por meio do conceito de herança.
+A abstração permite criar uma "visão" geral do que a classe ou método deve fazer, mas deixa a implmentação para subclasses ou classem que estejam implementando uma interface.
+
+## Classes Abstratas
+É uma classe que serve como base e pode conter métodos abstratos e concretos, ela não pode ser instanciada diretamente. Pode conter métodos abstratos (sem corpo) e métodos concretos (com implementação), 
+as classes abstratas, elas são utilizadas para definir o escopo de ações (métodos) de um conceito geral.
+Elas diferentemente das interfaces permitem a criação de instâncias e métodos construtores.
+
+## Interfaces
+Uma interface pode ser explicada como uma coleção de métodos abstratos, divergentemente das classes abstratas não podem conter métodos concretos, ou seja implementáveis. Seu uso é vantajoso pois funciona como uma extensão do escopo das classes abstratas em relação a herança.
+Dessa forma, ao implementar interfaces em classes essa prática oferece a possibilidade da criação de múltiplas heranças pois uma classe pode implementar várias interfaces.
