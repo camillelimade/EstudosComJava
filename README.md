@@ -110,7 +110,6 @@ A anotação `@Override` é utilizada para indicar que o método da subclasse es
 
 
 ## Abstração
-Link de apoio: https://comoprogramarjava.com.br/abstracao-em-java-classes-abstratas-e-interfaces/
 
 Diz respeito a criação de classes e interfaces que estabelecem uma estrutura básica para um tipo de objeto, por meio do conceito de herança.
 A abstração permite criar uma "visão" geral do que a classe ou método deve fazer, mas deixa a implmentação para subclasses ou classem que estejam implementando uma interface.
@@ -123,3 +122,126 @@ Elas diferentemente das interfaces permitem a criação de instâncias e método
 ## Interfaces
 Uma interface pode ser explicada como uma coleção de métodos abstratos, divergentemente das classes abstratas não podem conter métodos concretos, ou seja implementáveis. Seu uso é vantajoso pois funciona como uma extensão do escopo das classes abstratas em relação a herança.
 Dessa forma, ao implementar interfaces em classes essa prática oferece a possibilidade da criação de múltiplas heranças pois uma classe pode implementar várias interfaces.
+
+| Aspecto | Classe Abstrata | Interface |
+|--------|------------------|-----------|
+| Métodos Abstratos | Pode conter métodos abstratos e concretos | Todos os métodos eram abstratos até o Java 7 |
+| Construtores | Pode ter construtor | Não pode ter construtor |
+| Variáveis de Instância | Pode conter variáveis de instância | Não permite variáveis de instância |
+| Herança | Permite herança simples | Pode ser implementada por várias classes |
+| Implementação Múltipla | Uma classe pode herdar de apenas uma classe abstrata | Uma classe pode implementar várias interfaces |
+# Relacionamentos entre Classes ou Objetos em Java
+
+Esses relacionamentos referem-se ao ato em que um objeto ou uma classe se relaciona com outro objeto ou outra classe. Essa conexão possui diferentes graus, que variam de simples a complexos, podendo ser representados de maneiras distintas. Três tipos principais de associação são usados para modelar o relacionamento entre objetos.
+
+Dentre eles estão:
+- Associação
+- Agregação
+- Multiplicidade
+
+---
+
+## Associação (Fraca)
+
+É o relacionamento mais genérico, no qual um objeto sabe da existência do outro, e ambos existem de forma independente.
+
+**Exemplo:**  
+Um aluno conhece um professor, e, se o aluno for removido do sistema, o professor continuará existindo.
+
+### Exemplo em Java:
+```java
+class Aluno {
+    private Curso curso;
+}
+
+class Curso { 
+    private String nome;
+}
+```
+
+### Características:
+- Uma classe possui referência à outra
+- As classes podem existir de forma independente
+- Pode ser unidirecional ou bidirecional
+
+---
+
+## Agregação (Fraca)
+
+Um objeto todo contém outros objetos, porém estes ainda podem existir de forma independente.
+
+**Exemplo:**  
+Se um departamento for apagado, os funcionários vinculados a ele ainda podem existir de maneira independente.
+
+### Exemplo em Java
+Exemplo retirado de:  
+https://dev.to/emanoelcarvalho/associacao-entre-classes-ou-objetos-em-java-d1n
+
+```java
+class Funcionario {
+    private String nome;
+
+    Funcionario(String nome) {
+        this.nome = nome;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+}
+
+class Departamento {
+    private String nome;
+    private Funcionario funcionario;
+
+    Departamento(String nome, Funcionario funcionario) {
+        this.nome = nome;
+        this.funcionario = funcionario;
+    }
+
+    public void exibirInformacoes() {
+        System.out.println("Departamento: " + nome);
+        System.out.println("Funcionario: " + funcionario.getNome());
+    }
+}
+
+// Mesmo que o Departamento seja destruído, o Funcionário pode continuar existindo.
+
+public class TesteAgregacao {
+    public static void main(String[] args) {
+        Funcionario funcionario = new Funcionario("Maria");
+        Departamento departamento = new Departamento("RH", funcionario);
+
+        departamento.exibirInformacoes();
+        // O Departamento pode ser destruído, mas o Funcionário ainda existe.
+    }
+}
+```
+
+### Características:
+- Relacionamento mais fraco: o objeto pai contém o objeto filho, porém não é responsável pelo seu ciclo de vida
+- Existência independente: os objetos filhos podem existir sem o objeto pai
+
+---
+
+## Composição (Forte e Obrigatória)
+
+Um objeto depende completamente do outro. Por exemplo, uma pessoa possui um endereço, e, se a pessoa for excluída, o endereço também será.
+
+### Exemplo em Java:
+```java
+public class Endereco {
+    private String rua;
+    (...)
+}
+
+public class Pessoa {
+    private String nome;
+    private Endereco endereco;
+    (...)
+}
+```
+
+### Características:
+- Relacionamento forte: o objeto pai contém o objeto filho e controla seu ciclo de vida
+- Destruição: quando o objeto pai é destruído, o objeto filho também é destruído
