@@ -2,7 +2,7 @@
 
 Esse repositório foi criado com o intuito de centralizar meus exercícios de treinamento em Java, desenvolvidos a partir dos conteúdos estudados no **programa CapacitaRede**.
 
-O **[CapacitaRede](https://capacitabrasil.irede.org.br/)** é uma iniciativa educacional promovida pelo Instituto iRede, por meio do Capacita Brasil, com o objetivo de fortalecer a formação técnica e profissional de estudantes e jovens do Ceará, oferecendo capacitações na área de tecnologia e desenvolvimento de software.
+O **[CapacitaRede](https://capacitabrasil.irede.org.br/)** é uma iniciativa educacional promovida pelo Instituto iRede, por meio do Capacita Brasil, com o objetivo de fortalecer a formação técnica e profissional de estudantes e jovens do Ceará, oferecendo capacitações na área de tecnologia e desenvolvimento de _software_.
 
 Os códigos aqui armazenados correspondem às atividades práticas, exercícios e experimentos realizados ao longo da minha jornada de aprendizagem em Java, servindo como registro da minha evolução, fixação dos conceitos estudados e apoio para estudos futuros.
 
@@ -232,16 +232,69 @@ Um objeto depende completamente do outro. Por exemplo, uma pessoa possui um ende
 ```java
 public class Endereco {
     private String rua;
-    (...)
+    //(...)
 }
 
 public class Pessoa {
     private String nome;
     private Endereco endereco;
-    (...)
+    //(...)
 }
 ```
 
 ### Características:
 - Relacionamento forte: o objeto pai contém o objeto filho e controla seu ciclo de vida
 - Destruição: quando o objeto pai é destruído, o objeto filho também é destruído
+
+# Tratamento de Exceções e Erros em Java
+
+Em Java, é fundamental atentar-se aos possíveis erros que qualquer desenvolvedor, seja iniciante ou experiente, pode encontrar durante o processo de desenvolvimento. O tratamento de exceções é uma parte essencial da escrita de código **robusto e confiável**.
+
+Ao compreender a hierarquia das exceções, a diferença entre os conceitos envolvidos e a forma correta de utilizar os blocos específicos dessa boa prática, o programador internaliza padrões de qualidade para a criação de programas que lidam de maneira **preventiva e controlada** com erros.
+
+---
+
+## Exceções
+
+O tratamento de exceções é um aspecto fundamental em qualquer linguagem de programação, pois contribui diretamente para a **integridade e qualidade de um sistema**.
+
+Em Java, todas as exceções são filhas da classe `Throwable`. Dentro dessa classe, existem duas subclasses principais:
+- `Exception`
+- `Error`
+
+---
+
+## Checked Exceptions
+
+São exceções que o compilador **exige que sejam tratadas ou declaradas** na assinatura do método. Elas derivam da classe `Exception`, **excluindo** as subclasses de `RuntimeException`.
+
+Esse tipo de exceção força o programador a lidar explicitamente com situações que podem ocorrer durante a execução do programa.
+
+---
+
+## Unchecked Exceptions
+
+São exceções que **não precisam ser declaradas nem tratadas explicitamente** pelo compilador. Elas são subclasses de `RuntimeException`.
+
+Normalmente, estão associadas a erros de lógica no código, como acesso a índices inválidos ou uso incorreto de objetos.
+
+---
+
+## Erros
+
+Os erros representam problemas **graves**, considerados fatais, que geralmente não podem ser tratados pela aplicação. A presença de um ou mais erros no código pode impedir a compilação ou causar falhas críticas durante a execução.
+
+Esses problemas estão, em geral, relacionados ao **ambiente de execução**, como falhas na máquina virtual ou falta de recursos do sistema, e **não devem ser tratados pelo aplicativo**. As classes desse tipo pertencem à hierarquia de `Error`.
+
+---
+
+## Try, Catch e Finally
+
+As estruturas `try`, `catch` e `finally` são utilizadas para tratar exceções de forma organizada.
+
+- O bloco `try` contém o código que pode gerar exceções.
+- O bloco `catch` é responsável por tratar as exceções que ocorrerem.
+- O bloco `finally` contém código que será executado independentemente de uma exceção ter ocorrido ou não.
+
+Esses blocos permitem que o programa continue sua execução de maneira controlada, mesmo diante de falhas.
+
