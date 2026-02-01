@@ -1,4 +1,4 @@
-package Unidade_2_Cap1;
+package Unidade_2_Cap2;
 
 public class Pessoa {
     private String nomeCompleto;
