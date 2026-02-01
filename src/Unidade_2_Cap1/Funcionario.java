@@ -1,6 +1,4 @@
-package Unidade_2;
-
-import java.util.ArrayList;
+package Unidade_2_Cap1;
 
 public class Funcionario extends Pessoa {
     private String cargo;
