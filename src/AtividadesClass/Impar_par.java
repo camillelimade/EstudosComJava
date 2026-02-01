@@ -1,4 +1,4 @@
-package Atividades;
+package AtividadesClass;
 import java.util.Scanner; // importando a biblioteca Scanner, para utilizar no código
 public class Impar_par {
     public static void main(String[] args){
