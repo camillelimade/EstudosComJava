@@ -139,7 +139,7 @@ Dentre eles estão:
 - Agregação
 - Multiplicidade
 
----
+
 
 ## Associação (Fraca)
 
@@ -164,7 +164,7 @@ class Curso {
 - As classes podem existir de forma independente
 - Pode ser unidirecional ou bidirecional
 
----
+
 
 ## Agregação (Fraca)
 
@@ -222,7 +222,7 @@ public class TesteAgregacao {
 - Relacionamento mais fraco: o objeto pai contém o objeto filho, porém não é responsável pelo seu ciclo de vida
 - Existência independente: os objetos filhos podem existir sem o objeto pai
 
----
+
 
 ## Composição (Forte e Obrigatória)
 
@@ -252,7 +252,6 @@ Em Java, é fundamental atentar-se aos possíveis erros que qualquer desenvolved
 
 Ao compreender a hierarquia das exceções, a diferença entre os conceitos envolvidos e a forma correta de utilizar os blocos específicos dessa boa prática, o programador internaliza padrões de qualidade para a criação de programas que lidam de maneira **preventiva e controlada** com erros.
 
----
 
 ## Exceções
 
@@ -262,7 +261,6 @@ Em Java, todas as exceções são filhas da classe `Throwable`. Dentro dessa cla
 - `Exception`
 - `Error`
 
----
 
 ## Checked Exceptions
 
@@ -270,7 +268,7 @@ São exceções que o compilador **exige que sejam tratadas ou declaradas** na a
 
 Esse tipo de exceção força o programador a lidar explicitamente com situações que podem ocorrer durante a execução do programa.
 
----
+
 
 ## Unchecked Exceptions
 
@@ -278,15 +276,11 @@ São exceções que **não precisam ser declaradas nem tratadas explicitamente**
 
 Normalmente, estão associadas a erros de lógica no código, como acesso a índices inválidos ou uso incorreto de objetos.
 
----
-
 ## Erros
 
 Os erros representam problemas **graves**, considerados fatais, que geralmente não podem ser tratados pela aplicação. A presença de um ou mais erros no código pode impedir a compilação ou causar falhas críticas durante a execução.
 
 Esses problemas estão, em geral, relacionados ao **ambiente de execução**, como falhas na máquina virtual ou falta de recursos do sistema, e **não devem ser tratados pelo aplicativo**. As classes desse tipo pertencem à hierarquia de `Error`.
-
----
 
 ## Try, Catch e Finally
 
