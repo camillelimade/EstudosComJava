@@ -31,7 +31,7 @@ public class AulaDois {
         int idadeUser = leitor.nextInt();
         leitor.nextLine();
         System.out.println("Digite seu nome:  ");
-        String nomeUser = leitor.nextLine();
+        String nomeUser = leitor.nextLine();""
 
 
         System.out.println("Digite sua altura:  ");
