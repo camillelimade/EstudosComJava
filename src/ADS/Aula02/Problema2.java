@@ -1,5 +1,4 @@
 package ADS.Aula02;
-
 import java.util.Scanner;
 
 public class Problema2 {
@@ -17,12 +16,12 @@ public class Problema2 {
         // cria novas variavéis para facilitar manipulação, e comparações nas condicionais
         int valorBase = valorCompra/ parcelas; // já divide o total pela quantidade de parcelas solicitada
         int resto = valorCompra % parcelas; // pega o que sobra da divisão acima, logo esses dois valores são separados
-        // roda enquanto houverem parcelas roda
+        // enquanto houverem parcelas roda
         for (int i = 0; i < parcelas; i++){
             if (i < resto){ // vai dizendo o valor das primeiras parcelas
                 System.out.println("Parcela " + (i + 1) + ": " + valorBase + 1);
-            }else { // diz o valor da última caso dê resultado quebrado
-                System.out.println("Parcela quebrada " + (i + 1) + ": " + valorBase);
+            }else { // diz o valor das últimas caso dê resultado quebrado
+                System.out.println("Parcela " + (i + 1) + ": " + valorBase);
             }
         }
     }

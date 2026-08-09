@@ -1,5 +1,4 @@
 package ADS.Aula02;
-// posso explicar melhor
 import java.util.Scanner;
 
 public class Problema1 {
@@ -10,6 +9,7 @@ public class Problema1 {
         float b, t;
         // variaveis para obtenção do tamanho do corte via diferença
         float ladoEsq, ladoDir;
+        // entrada dos dados de comprimento
         System.out.println("Comprimento de b: ");
         b = out.nextFloat();
         System.out.println("Comprimento de t: ");

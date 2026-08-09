@@ -1,5 +1,4 @@
 package ADS.Aula02;
-
 import java.util.Scanner;
 
 public class Problema4 {

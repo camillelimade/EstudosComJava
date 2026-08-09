@@ -1,7 +1,5 @@
 package ADS.Aula02;
-
 import java.util.Scanner;
-
 public class Problema5 {
     public static void main(String[] args) {
         // cria instancia de leitura
@@ -20,8 +18,7 @@ public class Problema5 {
                 pos7 = i + 1;
             }
         }
-
-        // oitavas
+        // condicional que define o grupo
         if ((pos1 - 1) / 2 == (pos7 - 1) / 2){
             System.out.println("Oitavas");
         } else if ((pos1 - 1) / 4 == (pos7 - 1) / 4) {

@@ -1,10 +1,11 @@
 package ADS.Aula02;
-// posso detalhar melhor
 import java.util.Scanner;
 
 public class Problema3 {
     public static void main(String[] args) {
+        // criação das variaveis de localização de cada objeto
         int h, p, f, d;
+        // variaveis de distacia
         int distanciaFug, distanciaPol;
         // instancia de variavel de leitura
         Scanner leitura = new Scanner(System.in);
@@ -28,6 +29,7 @@ public class Problema3 {
           distanciaFug = (f - h + 16) % 16;
           distanciaPol = (f - p + 16) % 16;
         }
+        // condicional que define se a fuga é ou não bem sucedida
         if (distanciaPol <= distanciaFug){
             System.out.println("N ");
         }else {

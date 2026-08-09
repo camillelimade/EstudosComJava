@@ -1,7 +1,5 @@
 package ADS.Aula02;
-
 import java.util.Scanner;
-
 public class Problema6 {
     public static void main(String[] args) {
         // instancia de leitura
