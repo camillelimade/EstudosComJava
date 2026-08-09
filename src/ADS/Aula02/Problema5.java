@@ -9,11 +9,18 @@ public class Problema5 {
         // cria array
         int[] jogadores = new int[16];
         // variaveis responsaveis por cada jogador
+        int pos1 = 1, pos7 = 1;
         // loop for que percorre o array verificando os jogadores Zhao (1) e Liu (7)
         for (int i = 0; i < 16; i++){
             jogadores[i] = entrada.nextInt();
+            if (jogadores[i] == 1){
+                pos1 = i + 1;
+            }
+            if (jogadores[i] == 7){
+                pos7 = i + 1;
+            }
         }
-        int pos1 = 1, pos7 = 1;
+
         // oitavas
         if ((pos1 - 1) / 2 == (pos7 - 1) / 2){
             System.out.println("Oitavas");
