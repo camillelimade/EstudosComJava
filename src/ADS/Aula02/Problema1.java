@@ -1,5 +1,5 @@
 package ADS.Aula02;
-
+// posso explicar melhor
 import java.util.Scanner;
 
 public class Problema1 {
