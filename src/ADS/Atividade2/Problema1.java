@@ -1,4 +1,4 @@
-package ADS.Aula03;
+package ADS.Atividade2;
 
 public class Problema1 {
     public static void main(String[] args) {

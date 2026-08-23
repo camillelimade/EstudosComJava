@@ -1,4 +1,4 @@
-package ADS.Aula03;
+package ADS.Atividade2;
 
 import java.util.Scanner;
 
