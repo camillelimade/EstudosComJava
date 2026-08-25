@@ -45,18 +45,6 @@ public class ContaCorrente {
         }
     }
 
-    public void sacar(float valor) {
-        if (valor <= saldo) {
-            this.saldo -= valor;
-            System.out.println("Saque de " + valor + " realizado, na conta " + getConta());
-            System.out.println("Saldo atual: " + getSaldo());
-        } else {
-            System.out.println("Erro: O valor de saque (" + valor + "), é maior que o saldo atual (" + getSaldo() + ") da conta");
-            System.out.println("Saldo atual: " + getSaldo());
-        }
-
-    }
-
     public void exibirExtrato() {
         System.out.println("--------------------------");
         System.out.println("Informações de Extrato");
