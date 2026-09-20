@@ -15,13 +15,9 @@ public class Mamifero extends Animal {
     public void setAlimento(String alimento) {
         this.alimento = alimento;
     }
-    void dadosMamifero(){
-        System.out.println("Nome: " + getNome());
-        System.out.println("Comprimento: " + getComprimento());
-        System.out.println("Número de patas: " + getNumPatas());
-        System.out.println("Cor: " + getCor());
-        System.out.println("Ambiente: " + getAmbiente());
-        System.out.println("Velocidade média: " + getVeloMedia());
+    @Override
+    public void dados(){
+        super.dados();
         System.out.println("Alimento: " + getAlimento());
     }
 
@@ -35,6 +31,6 @@ public class Mamifero extends Animal {
                 20,
                 "Ração"
         );
-        m.dadosMamifero();
+        m.dados();
     }
 }

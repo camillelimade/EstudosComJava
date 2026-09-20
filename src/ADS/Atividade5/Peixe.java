@@ -15,14 +15,9 @@ public class Peixe extends Animal {
     public void setCarac(String carac) {
         this.carac = carac;
     }
-
-    public void dadosPeixe() {
-        System.out.println("Nome: " + getNome());
-        System.out.println("Comprimento: " + getComprimento());
-        System.out.println("Número de patas: " + getNumPatas());
-        System.out.println("Cor: " + getCor());
-        System.out.println("Ambiente: " + getAmbiente());
-        System.out.println("Velocidade média: " + getVeloMedia());
+    @Override
+    public void dados() {
+        super.dados();
         System.out.println("Característica: " + getCarac());
     }
 
@@ -36,7 +31,7 @@ public class Peixe extends Animal {
                 15,
                 "Pula muito"
         );
-        p.dadosPeixe();
+        p.dados();
     }
 }
 
