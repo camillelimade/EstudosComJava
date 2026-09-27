@@ -5,8 +5,9 @@ public class Normal extends Ingresso{
         super(valor);
     }
     @Override
-    public void imprimeValor(){
+    public float imprimeValor(){
         System.out.println("Ingresso Normal custa: " + super.valor);
+        return 0;
     }
 
     public static void main(String[] args) {
