@@ -8,9 +8,14 @@ public class CamaroteSuperior extends VIP{
         this.valorAddVIP = valorAddVIP;
     }
     @Override
-    public void imprimeValor(){
+    public float imprimeValor(){
         float result = valor + getValorAdd() + valorAddVIP;
         System.out.println("Ingresso Camarote Superior VIP custa: " + result);
+        return result;
+    }
+
+    private float getValorAdd() {
+        return 0;
     }
 
     public static void main(String[] args) {
