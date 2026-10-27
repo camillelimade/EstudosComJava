@@ -18,6 +18,26 @@ public class Produto {
         this.descricao = descricao;
     }
     public String getDescricao() {
-        return "Produto de informática ";
+        return "Produto de informática: " + this.descricao;
+    }
+
+    public String getNomeloja() {
+        return nomeloja;
+    }
+
+    public void setNomeloja(String nomeloja) {
+        this.nomeloja = nomeloja;
+    }
+
+    public float getPreco() {
+        return preco;
+    }
+
+    public void setPreco(float preco) {
+        this.preco = preco;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 }

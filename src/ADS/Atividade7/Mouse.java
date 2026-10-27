@@ -5,8 +5,17 @@ public class Mouse extends Produto{
         super(descricao);
         this.tipo = tipo;
     }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
     @Override
     public String getDescricao() {
-        return super.getDescricao() + ", " +  tipo;
+        return super.getDescricao() + ", Tipo: " +  tipo;
     }
 }
