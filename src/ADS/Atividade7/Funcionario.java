@@ -10,10 +10,10 @@ public class Funcionario {
     }
 
     double aumentoSalarial(double valor){
-        return salario + valor;
+        return this.salario + valor;
     }
     double ganhoAnual(){
-        return salario * 12;
+        return this.salario * 12;
     }
 
     public String getNome() {
@@ -33,7 +33,9 @@ public class Funcionario {
     }
 
     void exibeDados(){
+        System.out.println("----------------------------");
         System.out.println("Nome: " + this.nome);
         System.out.println("Salário: " + this.salario);
+        System.out.println("Ganho anual: " + ganhoAnual());
     }
 }
