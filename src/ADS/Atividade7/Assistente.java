@@ -4,7 +4,7 @@ public class Assistente extends Funcionario {
     int numMatricula;
 
     public Assistente(String nome, double salario, int numMatricula) {
-        super(nome, numMatricula);
+        super(nome, salario);
         this.numMatricula = numMatricula;
     }
     @Override
