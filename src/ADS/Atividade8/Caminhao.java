@@ -1,13 +1,33 @@
 package ADS.Atividade8;
 
-public class Caminhao extends Veiculo{
+public class Caminhao extends Veiculo implements Rastreavel{
     private int quantidadeEixos;
     private float valorCombustivel;
+    private double latitude;
+    private double longitude;
 
-    public Caminhao(String placa, String modelo, float capacidadeCarga, float quilometragem, int quantidadeEixos, float valorCombustivel) {
+    public Caminhao(String placa, String modelo, float capacidadeCarga, float quilometragem, int quantidadeEixos, float valorCombustivel, double latitude, double longitude) {
         super(placa, modelo, capacidadeCarga, quilometragem);
         this.quantidadeEixos = quantidadeEixos;
         this.valorCombustivel = valorCombustivel;
+        this.latitude = latitude;
+        this.longitude = longitude;
+    }
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
     }
 
     public int getQuantidadeEixos() {
@@ -42,5 +62,18 @@ public class Caminhao extends Veiculo{
         super.exibirDados();
         System.out.println("Quantidade de Eixos: " + this.quantidadeEixos);
         System.out.println("Valor do Combustivel: " + this.valorCombustivel);
+        obterLocalizacao();
+    }
+
+    @Override
+    public void atualizarLocalizacao(double latitude, double longitude) {
+        setLatitude(latitude); // atualiza os valores com setter
+        setLongitude(longitude);
+    }
+
+    @Override
+    public String obterLocalizacao() {
+        String loc = "(Latitude: " + latitude + ", Longitude: " + longitude + ")";
+        return "Última localização: " + loc;
     }
 }
